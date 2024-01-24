@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/movies">Movies</a></li>
+            <li><a href="/celebrities">Celebrities</a></li>
+             {{#if isMoviesPage}}
+                <li><a href="/movies/create">Create Movie</a></li>
+            {{else }}
+                <li><a href="/celebrities/create">Create Celebrity</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
     <div class="container">
       {{{body}}}
     </div>
